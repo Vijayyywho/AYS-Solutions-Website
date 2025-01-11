@@ -10,8 +10,17 @@ section {
     scroll-margin-top: 100px; /* Same as the offset in JavaScript */
 }
 /* Navigation */
+
 #navbar {
     flex-direction: column;
+    height: 50px;
+    
+}
+#logo img{
+    height: 20px;
+}
+#navbar::before{
+    height: 60px;
 }
 #navbar ul li a{
     font-size: 1rem;
@@ -39,7 +48,7 @@ body,html{
     height: 370px;
     padding: 3px 68px;
     margin-left: 0px;
-    margin-top: 100px;
+    margin-top: 75px;
 
 }
 
