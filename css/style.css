@@ -245,7 +245,7 @@ section {
 #client-section {
     margin-top: 40px;
     padding: 40px 20px;
-    background-color: #f8f8f8;
+    
 }
 
 #client-section h1 {
@@ -300,6 +300,8 @@ section {
     transform: scale(1.05);
     transition: transform 0.3s ease;
 }
+
+
 
 
   
