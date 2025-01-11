@@ -1,3 +1,14 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+html {
+    scroll-behavior: smooth;
+}
+
+section {
+    scroll-margin-top: 100px; /* Same as the offset in JavaScript */
+}
 /* Navigation */
 #navbar {
     flex-direction: column;
@@ -7,12 +18,24 @@
     padding: 0px 7px;
     padding-bottom: 8px;
 }
+/* --fixing and blocking the left and right movement */
+body,html{
+    overflow-x: hidden;
+    width: 100%;
+}
+*{
+    box-sizing: border-box;
+}
+#navbar, #home, #services, #contact, footer {
+    width: 100%;
+}
 
 /* Home Section */
 #home {
     height: 370px;
     padding: 3px 68px;
     margin-left: 0px;
+    margin-top: 100px;
 
 }
 
@@ -29,6 +52,10 @@
 /* Services section */
 #services {
     flex-direction: column;
+    align-items: baseline;
+    align-items: center;
+    margin-left: 4px;
+
     
     
 }
@@ -41,13 +68,11 @@
 /* client section  */
 #clients {
     flex-direction: column;
-    /* flex-wrap: wrap; */
+    
+    
 }
-/* #clients img{
-    width: 66px;
-    padding: 2px 6px;
-    height:auto;
-} */
+
+
 
 
 
@@ -59,6 +84,10 @@
 #contact::before{
     margin-left: 0px;
     
+}
+#contact-box form{
+    width: 65%;
+
 }
 
 /* footer  */

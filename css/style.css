@@ -3,6 +3,14 @@
     margin: 0;
     padding: 0;
 }
+html {
+    scroll-behavior: smooth;
+}
+
+section {
+    scroll-margin-top: 100px; /* Same as the offset in JavaScript */
+}
+
 
 /* CSS Variables */
 :root{
@@ -14,6 +22,11 @@
     align-items: center;
     position: relative;
     top: 0px;
+    position:fixed;
+    left: 0;
+    width: 100%;
+    z-index: 100;
+    
 
 }
 /* Logo and Image */
@@ -59,9 +72,10 @@
 }
 /* mouse pointer color black */
 #navbar ul li a:hover{
-    color: black;
-    background-color: white;
+    color: #ef6e12;
+    
 }
+
 
 
 /* Home Section */
@@ -71,7 +85,7 @@
     flex-direction: column;
     padding: 3px 50px;
     justify-content: center;
-    height: 640px;
+    height: 720px;
     top:0px;
     left: 0px;
     align-items: center;
