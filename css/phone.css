@@ -18,9 +18,11 @@ section {
 }
 #logo img{
     height: 20px;
+    margin-bottom: 0px;
+    margin-top: 0px;
 }
 #navbar::before{
-    height: 60px;
+    height: 52px;
 }
 #navbar ul li a{
     font-size: 1rem;
