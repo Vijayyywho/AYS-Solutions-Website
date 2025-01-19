@@ -8,6 +8,10 @@
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" media="screen and (max-width: 1225px)" href="css/phone.css">
     <link href="https://fonts.googleapis.com/css2?family=Bree+Serif&family=Montserrat:wght@100..900&display=swap" rel="stylesheet">
+    <script src="js/services.js"></script>
+    <!-- Add this to the <head> section of your HTML -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+
 </head>
 
 <body>
@@ -29,42 +33,83 @@
 
     <!-- Home Section -->
     <section id="home">
-        <div id="home-image">
-        <img src="images/services4.jpg" alt="Asy Solutions">
+        <div id="home-content">
+            <div id="home-text">
+                <h1 class="h-primary">Empathy. Experience. Excellence.</h1>
+                <h2 class="h-primary">Find Your Solutions Today!</h2>
+                <p>Discover seamless connections and reliable services tailored to your needs.</p>
+            </div>
+            <div id="home-image">
+                <img src="images/services4.jpg" alt="Asy Solutions">
+            </div>
         </div>
-        <h1 class="h-primary">"Empathy. Experience. Excellence."</h1>
-        <h2 class="h-primary">"----Find Your Solutions Today!"</h2>
-        <p>Discover seamless connections and reliable services tailoreed to your needs.</p>
-        
-        
     </section>
+    
 
-    <!-- Services Section -->
+   <!-- Services Section -->
 <section class="services-container" id="service">
     <h1 class="h-primary center">Our Services</h1>
     <div id="services">
-        <div class="box">
-            <img src="images/services3.jpg" alt="Service 1">
-            <h2 class="h-secondary center">Web Design</h2>
-            <p class="center">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quidem fuga placeat eaque minima labore.</p>
+        <!-- Highlighted services (always visible) -->
+        <div class="box highlight">
+            <i class="icon fas fa-chart-line"></i>
+            <h2 class="h-secondary center">Management</h2>
         </div>
-        <div class="box">
-            <img src="images/services3.jpg" alt="Service 2">
-            <h2 class="h-secondary center">App Development</h2>
-            <p class="center">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quidem fuga placeat eaque minima labore.</p>
+        <div class="box highlight">
+            <i class="icon fas fa-database"></i>
+            <h2 class="h-secondary center">Business Intelligence & Analytics</h2>
         </div>
-        <div class="box">
-            <img src="images/services3.jpg" alt="Service 3">
-            <h2 class="h-secondary center">Digital Marketing</h2>
-            <p class="center">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quidem fuga placeat eaque minima labore.</p>
+        <div class="box highlight">
+            <i class="icon fas fa-bullhorn"></i>
+            <h2 class="h-secondary center">Sales and Marketing</h2>
         </div>
-        <div class="box">
-            <img src="images/services3.jpg" alt="Service 4">
-            <h2 class="h-secondary center">UI/UX Marketing</h2>
-            <p class="center">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quidem fuga placeat eaque minima labore.</p>
+        <div class="box highlight">
+            <i class="icon fas fa-handshake"></i>
+            <h2 class="h-secondary center">Mergers and Acquisitions</h2>
         </div>
     </div>
+
+    <!-- Hidden (non-highlighted) services -->
+    <div id="extra-services" class="extra-services" style="display: none;">
+        <div class="box">
+            <i class="icon fas fa-dollar-sign"></i>
+            <h2 class="h-secondary center">Financials</h2>
+        </div>
+        <div class="box">
+            <i class="icon fas fa-users"></i>
+            <h2 class="h-secondary center">Human Resources</h2>
+        </div>
+        <div class="box">
+            <i class="icon fas fa-bed"></i>
+            <h2 class="h-secondary center">Hospitality</h2>
+        </div>
+        <div class="box">
+            <i class="icon fas fa-gavel"></i>
+            <h2 class="h-secondary center">Legal</h2>
+        </div>
+        <div class="box">
+            <i class="icon fas fa-building"></i>
+            <h2 class="h-secondary center">Real Estate</h2>
+        </div>
+        <div class="box">
+            <i class="icon fas fa-plane"></i>
+            <h2 class="h-secondary center">Travel</h2>
+        </div>
+        <div class="box">
+            <i class="icon fas fa-graduation-cap"></i>
+            <h2 class="h-secondary center">Training and Development</h2>
+        </div>
+        <div class="box">
+            <i class="icon fas fa-film"></i>
+            <h2 class="h-secondary center">Event and Production</h2>
+        </div>
+    </div>
+
+    <div class="center">
+        <button class="btn cta" onclick="toggleServices()">Explore All Services</button>
+    </div>
 </section>
+
 
     <!-- About Us Section -->
     <section id="client-section">

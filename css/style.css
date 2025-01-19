@@ -79,97 +79,137 @@ section {
 
 
 /* Home Section */
-#home{
-
+/* Adjusted CSS for Home Section */
+#home {
     display: flex;
-    flex-direction: column;
-    padding: 3px 50px;
-    justify-content: center;
-    height: 720px;
-    top:0px;
-    left: 0px;
     align-items: center;
-    position: relative;
-}
-#home::before{
-    content: "";
-    background: linear-gradient(90deg, blue, lightblue);
-    position: absolute;
-    height: 100%;
-    width: 100%;
-    z-index: -1;
-    opacity: 0.89;
-}
-
-
-#home h1{
-    font-family: "Montserrat", serif;
+    justify-content: center;
+    padding: 50px;
+    background: linear-gradient(90deg, #1e3c72, #2a5298);
     color: white;
-    text-align: center;
-    margin-top:2px;
-}
-#home h2{
-    color: white;
-    font-size: 1.5rem;
-    margin-top: -15px;
-    margin-left: 400px;
-}
-#home p{
-    color: white;
-    text-align: center;
-    font-family: "Roboto", serif;
-    font-size: 18px;
-}
-
-#home-image img{
-    margin-top: 110px;
-    height: 450px;
-    width: 900px;
+    margin-top: 88px;
     
 }
+
+#home-content {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 20px;
+    width: 100%;
+    max-width: 1200px;
+}
+
+#home-text {
+    flex: 1;
+    text-align: left;
+    margin-top: 20px;
+    margin-left: -110px;
+}
+
+#home-text h1 {
+    font-size: 36px;
+    margin-bottom: 10px;
+    font-family: 'Montserrat Bold', sans-serif;
+    font-weight: 700;
+}
+
+#home-text h2 {
+    font-size: 1.9rem;
+    margin-bottom: 15px;
+    font-family: 'Montserrat Bold', sans-serif;
+    /* font-weight: 700; */
+}
+
+#home-text p {
+    font-size: 18px;
+    line-height: 1.6;
+    margin-left: 12px;
+    font-family: "Roboto", serif;
+    font-optical-sizing: auto;
+}
+
+#home-image {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#home-image img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+@media screen and (max-width: 768px) {
+    #home-content {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    #home-text {
+        margin-top: 15px;
+        margin-bottom: 20px;
+    }
+
+    #home-text h1 {
+        font-size: 2rem;
+    }
+
+    #home-text h2 {
+        font-size: 1.4rem;
+    }
+
+    #home-text p {
+        font-size: 1rem;
+    }
+
+    #home-image img {
+        max-width: 90%;
+    }
+}
+
+
 
 /* Services Section */
 #services {
     margin: 5px auto;
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); /* Responsive grid */
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)); /* General layout for services */
     gap: 20px;
     justify-items: center;
     padding: 40px;
-    margin-top: -45px;
-    
 }
 
+/* Highlighted services grid (only 4 per row) */
+#services .highlight {
+    width: 100%; /* Make highlighted services take full width of their grid cell */
+    display: flex;
+    justify-content: center; /* Center the content inside the box */
+    align-items: center; /* Vertically center the content */
+    border: 2px solid #f69e22;
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    margin: 0 auto; 
+    margin-left: 130px;/* Automatically set equal margins on left and right */
+}
+
+/* Specific grid layout for highlighted services */
+#services .highlight:nth-child(-n+4) {
+    grid-column: span 1; /* This ensures only 4 highlighted services per row */
+}
+
+/* Regular boxes (non-highlighted services) */
 #services .box {
     background: #fff;
     border-radius: 12px;
-    padding: 20px;
+    padding:20px;
     text-align: center;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
     transition: transform 0.3s ease, box-shadow 0.3s ease;
-    overflow: hidden;
-}
-
-#services .box img {
-    width: 100%;
-    height: 200px;
-    object-fit: cover;
-    border-radius: 8px;
-    margin-bottom: 15px;
-}
-
-#services .box h2 {
-    font-size: 1.5rem;
-    color: #333;
-    margin-bottom: 10px;
-    font-family: 'Bree Serif', serif;
-}
-
-#services .box p {
-    font-size: 1rem;
-    color: #666;
-    line-height: 1.6;
-    padding: 0 10px;
+    
 }
 
 #services .box:hover {
@@ -177,77 +217,73 @@ section {
     box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
 }
 
-#services .box:hover h2 {
-    color: #ef6e12;
+#services .box .icon {
+    font-size: 2.5rem;
+    color: #f69e22;
+    margin-bottom: 10px;
 }
 
-#services .box:hover p {
-    color: #555;
+#services .box h2 {
+    font-size: 1.5rem;
+    color: #333;
 }
 
 
-/* Adding responsiveness for smaller devices */
-@media screen and (max-width: 768px) {
-    #services {
-        grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)); /* More compact grid on mobile */
-    }
 
-    #services .box img {
-        height: 150px; /* Make images smaller on mobile */
-    }
 
-    #services .box h2 {
-        font-size: 1.3rem;
-    }
-
-    #services .box p {
-        font-size: 0.9rem;
-    }
+/* Initially hide the extra services */
+.extra-services {
+    display: none; /* Hidden by default */
 }
 
-#service h1 {
-    font-family: 'Montserrat', sans-serif;
-    font-size: 3.5rem;
-    font-weight: 700;
+.box {
+    background: #fff;
+    border-radius: 12px;
+    padding: 20px;
     text-align: center;
-    color: #34495e;
-    margin-bottom: 20px;
-    position: relative;
-    text-transform: uppercase;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-#service h1 {
-    background: linear-gradient(90deg, blue, darkorange);
-    -webkit-background-clip: text;
-    color: transparent;
+/* Highlighted services */
+.box.highlight {
+    border: 2px solid #f69e22;
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
 }
 
-#service h1::after {
-    content: '';
-    display: block;
-    width: 120px;
-    height: 4px;
-    background-color: #ef6e12;
-    margin: 20px auto 0;
-    border-radius: 5px;
-    opacity: 0.8;
-    transition: opacity 0.3s ease-in-out;
+/* Hover effects for all services */
+.box:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
 }
 
-#service h1:hover::after {
-    opacity: 1;
+.box .icon {
+    font-size: 2.5rem;
+    color: #f69e22;
+    margin-bottom: 10px;
 }
 
-
-/* Hover effect for the underline */
-#service h1:hover::after {
-    opacity: 1; /* Fully visible underline on hover */
+.box h2 {
+    font-size: 1.5rem;
+    color: #333;
 }
 
-/* Subtle shadow effect to add depth */
-#service h1 {
-    text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.2);
+.btn.cta {
+    padding: 12px 30px;
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: #fff;
+    background: #f69e22;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background 0.3s;
 }
+
+.btn.cta:hover {
+    background: #d4881b;
+}
+
 
 
 /* Clients section */
