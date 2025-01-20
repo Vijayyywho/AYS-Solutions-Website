@@ -283,6 +283,259 @@ section {
 .btn.cta:hover {
     background: #d4881b;
 }
+/* Testimonials Section */
+#testimonials {
+    background-color: #ffffff;
+    padding: 50px 20px;
+    color: #001a60;
+    text-align: center;
+}
+
+#testimonials h1 {
+    font-family: 'Roboto', sans-serif;
+    font-size: 2.5rem;
+    margin-bottom: 30px;
+}
+
+.carousel {
+    display: flex;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    gap: 20px;
+    padding: 20px 0;
+}
+
+.testimonial {
+    min-width: 300px;
+    max-width: 400px;
+    background: #ffffff;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    text-align: center;
+    scroll-snap-align: center;
+    flex-shrink: 0;
+}
+
+.testimonial p {
+    font-size: 1rem;
+    font-family: 'Roboto', italic;
+    color: #001a60;
+    margin-bottom: 10px;
+}
+
+.testimonial .client-name {
+    font-size: 18px;
+    font-family: 'Roboto', italic;
+    color: #f69e22;
+    font-weight: bold;
+}
+/* CTA Section */
+#cta-section {
+    background-color: #001a60; /* Dark background for contrast */
+    padding: 50px 20px;
+    text-align: center;
+    color: white;
+}
+
+.cta-heading {
+    font-size: 2rem;
+    margin-bottom: 20px;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: bold;
+}
+
+.cta-btn {
+    display: inline-block;
+    padding: 15px 40px;
+    background-color: #f69e22; /* Secondary color */
+    color: white;
+    font-size: 1.2rem;
+    text-decoration: none;
+    border-radius: 8px;
+    font-weight: bold;
+    transition: background-color 0.3s;
+}
+
+.cta-btn:hover {
+    background-color: #d4881b; /* Darker shade on hover */
+}
+
+/* About Us Section */
+#about-us {
+    padding: 60px 20px;
+    background-color: #ffffff;
+    text-align: center;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Light shadow around section */
+}
+
+.about-heading {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
+    font-size: 36px;
+    margin-bottom: 20px;
+    color: #001a60; /* Primary color */
+    text-transform: uppercase; /* Make heading stand out */
+    letter-spacing: 2px;
+}
+
+.about-text {
+    font-family: 'Roboto', sans-serif;
+    font-size: 28px;
+    line-height: 1.8;
+    color: #333; /* Dark text for readability */
+    margin-bottom: 50px;
+    font-weight: 300;
+}
+
+/* Timeline */
+.timeline {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    margin-top: 50px;
+    align-items: center; /* Center all items */
+}
+
+/* Milestone Style */
+.milestone {
+    background-color: #ffffff; /* White background for milestones */
+    padding: 20px; /* Reduced padding for smaller boxes */
+    border-radius: 8px;
+    border: 1px solid #ddd; /* Light border */
+    width: 100%; /* Make the width consistent */
+    max-width: 600px; /* Reduced max-width for smaller boxes */
+    height: 200px; /* Reduced height for smaller boxes */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.milestone:nth-child(even) {
+    background-color: #f6f6f6; /* Light gray for even milestones */
+}
+
+.milestone:nth-child(1), /* 2010 */
+.milestone:nth-child(3) { /* 2020 */
+    background-color: #001a60; /* Blue background for 2010 and 2020 */
+    color: white; /* White text for both heading and body */
+}
+
+.milestone:nth-child(2) { /* 2015 */
+    color: #001a60; /* Blue text for 2015 milestone */
+}
+
+.milestone:hover {
+    transform: translateY(-5px); /* Lifting effect */
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1); /* Increased shadow on hover */
+}
+
+.milestone h2 {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 28px;
+    color: inherit; /* Inherit color from milestone style */
+    margin-bottom: 10px;
+    font-weight: 600;
+}
+
+.milestone p {
+    font-family: 'Roboto', sans-serif;
+    font-size: 16px;
+    color: inherit; /* Inherit color from milestone style */
+    font-weight: 300;
+    line-height: 1.6;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+    .about-heading {
+        font-size: 2rem;
+    }
+
+    .about-text {
+        font-size: 1rem;
+    }
+
+    .milestone h2 {
+        font-size: 24px;
+    }
+
+    .milestone p {
+        font-size: 16px;
+    }
+}
+/* Mission and Vision Section */
+.mission-vision {
+    display: flex;
+    justify-content: space-between;
+    gap: 30px;
+    margin-top: 40px;
+    text-align: center;
+}
+
+/* Mission and Vision Content */
+.mission, .vision {
+    background-color: #ffffff;
+    padding: 30px;
+    border-radius: 8px;
+    border: 1px solid #ddd; /* Light border */
+    width: 45%; /* Two-column layout */
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Soft shadow */
+}
+
+.mission .icon, .vision .icon {
+    font-size: 2.5rem;
+    color: #f69e22; /* Secondary color for icons */
+    margin-bottom: 15px;
+}
+
+.mission .heading, .vision .heading {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 24px;
+    color: #001a60; /* Primary color for headings */
+    margin-bottom: 10px;
+}
+
+.mission p, .vision p {
+    font-family: 'Roboto', sans-serif;
+    font-size: 16px;
+    color: #555; /* Lighter text for description */
+    font-weight: 300;
+    line-height: 1.6;
+}
+
+.mission:nth-child(2) { /* 2015 */
+    color: #001a60; /* Blue text for 2015 milestone */
+}
+
+/* Responsive Adjustments for Mobile */
+@media (max-width: 768px) {
+    .mission-vision {
+        flex-direction: column; /* Stack the Mission and Vision sections vertically */
+        gap: 20px;
+    }
+
+    .mission, .vision {
+        width: 100%; /* Full width for each section on mobile */
+    }
+
+    .mission .icon, .vision .icon {
+        font-size: 2rem; /* Smaller icons on mobile */
+    }
+
+    .mission .heading, .vision .heading {
+        font-size: 1.6rem;
+    }
+
+    .mission p, .vision p {
+        font-size: 1rem;
+    }
+}
+
 
 
 

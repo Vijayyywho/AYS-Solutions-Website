@@ -6,3 +6,4 @@ function toggleServices() {
         extraServices.style.display = "none"; // Hide the extra services again
     }
 }
+
