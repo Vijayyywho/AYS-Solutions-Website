@@ -7,3 +7,13 @@ function toggleServices() {
     }
 }
 
+// function for the blog section 
+function toggleBlogPosts() {
+    var extraBlogPosts = document.getElementById('extra-blog-posts');
+    if (extraBlogPosts.style.display === "none" || extraBlogPosts.style.display === "") {
+        extraBlogPosts.style.display = "grid"; // Show the extra blog posts
+    } else {
+        extraBlogPosts.style.display = "none"; // Hide the extra blog posts again
+    }
+}
+

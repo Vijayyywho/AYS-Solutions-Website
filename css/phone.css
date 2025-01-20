@@ -13,20 +13,27 @@ section {
 
 #navbar {
     align-items: center;
+    flex-direction: column;
     justify-content: center;
     height: 50px;
     
 }
 #logo img{
-    height: 30px;
+    height: 25px;
     margin-bottom: 0px;
-    margin-top: 0px;
+    margin-top: 5px;
+    margin-left: 0px;
+    background-color: white;
+    border-radius: 10px;
+    
+    
 }
 #navbar::before{
-    height: 47px;
+    height: 53px;
 }
 #navbar ul li a{
-    font-size: 1rem;
+    font-size: 13px;
+    font-weight: 900;
     padding: 0px 7px;
     padding-bottom: 8px;
 }
@@ -437,114 +444,231 @@ body,html{
         font-size: 1rem; /* Adjust font size for mobile */
     }
 }
-
-
-
-/* client section  */
-/* Client Section */
-#client-section {
+/* Blog Section Mobile */
+#blog {
     padding: 20px;
-    margin-top: -40px;
-}
-
-#client-section h1 {
-    font-size: 2rem;
-    color: #34495e;
+    background-color: #ffffff;
     text-align: center;
-    font-family: 'Montserrat', sans-serif;
-    margin-bottom: 20px;
-    font-weight: 700;
-    text-transform: uppercase;
-    font-size: 2rem;
+    margin:auto;
 }
 
-#clients {
-    display: flex;
-    flex-direction: column; /* Stack the items vertically */
-    align-items: center; /* Center the items horizontally */
-    gap: 20px;
-    justify-content: center; /* Vertically center */
-}
-
-.client-item {
-    background: #ffffff;
-    padding: 15px;
-    border-radius: 12px;
-    text-align: center;
-    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
-    width: 80%; /* Ensure they don't span the whole width */
-    max-width: 300px; /* Limit the width */
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-.client-item img {
-    width: 100%;
-    height: 150px;
-    object-fit: cover;
-    border-radius: 10px;
-}
-
-.client-item h2 {
-    font-size: 1.3rem;
-    color: #34495e;
-    margin-top: 15px;
-    font-family: 'Montserrat', sans-serif;
-}
-
-/* Hover Effects */
-.client-item:hover {
-    transform: translateY(-8px);
-    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
-}
-
-.client-item img:hover {
-    transform: scale(1.05);
-    transition: transform 0.3s ease;
-}
-
-
-
-
-
-
-/* contact us  */
-/* Phone.css - Styles for Contact Us Section */
-
-/* General container styling */
-.contact-container {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    padding: 20px;
-    background: linear-gradient(135deg, #1e3c72, #2a5298);
-    color: #fff;
-    font-family: 'Arial', sans-serif;
-    text-align: center;
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
-  }
-  
-  /* Title styling */
-  .contact-title {
-    font-size: 2rem;
-    margin-bottom: 10px;
+#blog h1 {
+    font-size: 1.4rem;
+    color: #001a60;
+    margin-bottom: 15px;
     font-weight: bold;
-    text-transform: uppercase;
-    letter-spacing: 2px;
-  }
-  
-  /* Contact details container */
-  .contact-details {
+}
+
+.blog-posts {
+    display: grid;
+    grid-template-columns: 1fr; /* Stack blog posts in a single column on mobile */
+    gap: 15px;
+    margin-top: 15px;
+}
+
+.blog-post {
+    background: #fff;
+    padding: 15px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.blog-post img {
+    width: 80%;
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    margin: 0 auto; /* Center the image */
+}
+
+.blog-text {
+    margin-top: 15px;
+}
+
+.blog-text h2 {
+    font-size: 1.2rem;
+    color: #001a60;
+    margin-bottom: 8px;
+    font-weight: 600;
+}
+
+.blog-text p {
+    font-size: 0.9rem;
+    line-height: 1.5;
+    color: #333;
+    margin-bottom: 12px;
+}
+
+.read-more {
+    color: #001a60;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.read-more:hover {
+    text-decoration: underline;
+}
+
+/* Show hidden posts when the button is clicked */
+.extra-blog-posts {
+    display: none;
+    grid-template-columns: repeat(2, 1fr); /* Allow more columns when the hidden posts are shown */
+    gap: 15px;
+    justify-items: center;
+    margin-left: auto;
+}
+
+/* Button styling */
+.btn.cta {
+    padding: 10px 25px;
+    font-size: 1rem;
+    background-color: #f69e22;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    display: block; /* Makes the button a block element */
+    margin: 20px auto; /* Centers the button horizontally */
+}
+
+
+.btn.cta:hover {
+    background-color: #d4881b;
+}
+
+/* Responsive adjustments for smaller screens */
+@media (max-width: 768px) {
+    .blog-posts {
+        grid-template-columns: 1fr; /* Stack blog posts on mobile */
+        gap: 15px;
+    }
+
+    .btn.cta {
+        width: 100%; /* Full width on mobile */
+    }
+}
+
+
+
+
+
+/* Contact Section for Mobile */
+#contact {
+    background: linear-gradient(1deg, grey, black);
+    padding: 50px 20px;
+    color: white;
+    text-align: center;
+}
+
+#contact h1 {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 2rem;
+    margin-bottom: 30px;
+    color: #fff;
+    text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.2);
+    position: relative;
+}
+
+#contact h1::after {
+    content: '';
+    display: block;
+    width: 100px;
+    height: 4px;
+    background-color: #ff7f50;
+    margin: 20px auto;
+    border-radius: 2px;
+}
+
+#contact-box {
     display: flex;
     flex-direction: column;
-    gap: 15px;
-    margin: 20px 0;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+}
+
+#contact-box form {
+    width: 100%;
+    max-width: 600px;
+    background: #fff;
+    padding: 43px;
+    border-radius: 12px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+}
+
+#contact-box .form-group {
+    margin-bottom: 20px;
+    text-align: left;
+}
+
+#contact-box label {
+    font-size: 1rem;
+    color: #333;
+    display: block;
+    margin-bottom: 8px;
+    font-family: 'Bree Serif', serif;
+}
+
+#contact-box input,
+#contact-box textarea {
+    width: 100%;
+    padding: 10px;
+    font-size: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    outline: none;
+    font-family: 'Montserrat', sans-serif;
+    background: #f9f9f9;
+    transition: all 0.3s;
+}
+
+#contact-box input:focus,
+#contact-box textarea:focus {
+    border-color: #ff7f50;
+    background: #fff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+#contact-box textarea {
+    resize: none;
+    height: 150px;
+}
+
+#contact-box .btn.cta {
+    width: 100%;
+    padding: 12px 20px;
     font-size: 1.2rem;
-  }
-  
-  /* Icons styling */
-  .contact-item {
+    font-family: 'Bree Serif', serif;
+    background-color: #f69e22; /* Secondary color */
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+}
+
+#contact-box .btn.cta:hover {
+    background: #d4881b;
+}
+
+#contact-box .btn:active {
+    transform: translateY(0);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Contact Details */
+.contact-details {
+    margin-top: 30px;
+    color: #fff;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.contact-item {
     display: flex;
     align-items: center;
     gap: 10px;
@@ -552,50 +676,47 @@ body,html{
     padding: 10px 15px;
     border-radius: 5px;
     transition: transform 0.3s, background 0.3s;
-  }
-  
-  .contact-item:hover {
+    margin-bottom: 10px;
+}
+
+.contact-item:hover {
     transform: translateY(-3px);
     background: rgba(255, 255, 255, 0.2);
-  }
-  
-  .contact-item i {
+}
+
+.contact-item i {
     font-size: 1.5rem;
     color: #ffeb3b;
-  }
-  
-  /* Button styling */
-  .contact-button {
-    padding: 10px 20px;
-    font-size: 1rem;
-    font-weight: bold;
-    color: #fff;
-    background-color: #ff5722;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    transition: background-color 0.3s;
-  }
-  
-  .contact-button:hover {
-    background-color: #e64a19;
-  }
-  
-  /* Responsive design */
-  @media (max-width: 768px) {
-    .contact-title {
-      font-size: 1.8rem;
+}
+
+.contact-item p {
+    font-size: 1.2rem;
+}
+
+/* Responsive design for mobile */
+@media (max-width: 768px) {
+    #contact-box {
+        flex-direction: column; /* Stack form and contact details vertically */
+        align-items: center;
     }
-  
+
     .contact-details {
-      font-size: 1rem;
+        gap: 10px; /* Reduced gap for better spacing */
     }
-  
+
     .contact-item i {
-      font-size: 1.2rem;
+        font-size: 1.2rem;
     }
-  }
-  
+
+    .contact-item p {
+        font-size: 1rem;
+    }
+
+    .contact-box .btn.cta {
+        width: 80%; /* Smaller width on mobile */
+    }
+}
+
 
 /* footer  */
 footer {
