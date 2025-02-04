@@ -1,0 +1,128 @@
+/* General Styles */
+body {
+    font-family: 'Montserrat', sans-serif;
+    background-color: #f8f9fa;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+/* Form Container */
+.form-container {
+    background-color: #ffffff;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    padding: 70px 70px;
+    padding-left: 60px;
+    padding-right: 60px;
+    width: 100%;
+    max-width: 400px;
+    text-align: center;
+    justify-content: center;
+}
+
+/* Logo Section */
+.logo {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.logo-img {
+    max-width: 100%;
+    height: auto;
+    max-height: 60px;
+}
+
+/* Form Heading */
+.form-container h1 {
+    font-size: 24px;
+    font-weight: 600;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+/* Form Group */
+.form-group {
+    margin-bottom: 20px;
+    text-align: left;
+}
+
+/* Labels */
+.form-group label {
+    font-size: 14px;
+    color: #555;
+    display: block;
+    margin-bottom: 8px;
+    font-weight: 600;
+}
+
+/* Inputs and Select Fields */
+.form-group input,
+.form-group select {
+    width: 100%;
+    padding: 18px 20px;
+    font-size: 14px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    outline: none;
+    background-color: #f8f8f8;
+    transition: border-color 0.3s, box-shadow 0.3s;
+    box-sizing: border-box; /* Ensures consistent sizing */
+    appearance: none; /* Removes native dropdown styles for consistent styling */
+}
+
+/* Custom styling for the select dropdown arrow */
+.form-group select {
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23999' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpolyline points='6 9 12 15 18 9'%3E%3C/polyline%3E%3C/svg%3E");
+    background-repeat: no-repeat;
+    background-position: right 10px center;
+    background-size: 16px;
+}
+
+/* Focus Effect */
+.form-group input:focus,
+.form-group select:focus {
+    border-color: #f69e22;
+    box-shadow: 0 0 6px rgba(246, 158, 34, 0.3);
+    background-color: #fff;
+}
+
+/* Submit Button */
+.btn {
+    width: 100%;
+    padding: 12px;
+    font-size: 16px;
+    color: #ffffff;
+    background-color: #f69e22;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.2s;
+    font-weight: 600;
+}
+
+.btn:hover {
+    background-color: #d4881b;
+}
+
+.btn:active {
+    transform: scale(0.98);
+}
+
+/* Back Button */
+.back-btn {
+    display: inline-block;
+    margin-top: 20px;
+    font-size: 14px;
+    color: #f69e22;
+    text-decoration: none;
+    font-weight: 600;
+    transition: color 0.3s;
+}
+
+.back-btn:hover {
+    color: #d4881b;
+}

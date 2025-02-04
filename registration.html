@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registration Form</title>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/registration.css">
+</head>
+
+<body>
+    <div class="form-container">
+        <!-- Logo Section -->
+        <div class="logo">
+            <img src="images/ay.jpg" alt="Logo" class="logo-img">
+        </div>
+
+        <!-- Form Heading -->
+        <h1>Register with Us</h1>
+
+        <form action="submit_registration.php" method="post">
+            <!-- Name Field -->
+            <div class="form-group">
+                <label for="name">Name</label>
+                <input type="text" id="name" name="name" placeholder="Enter your full name" required>
+            </div>
+
+            <!-- Email Field -->
+            <div class="form-group">
+                <label for="email">Email</label>
+                <input type="email" id="email" name="email" placeholder="Enter your email address" required>
+            </div>
+
+            <!-- Phone Number Field -->
+            <div class="form-group">
+                <label for="phone">Phone Number</label>
+                <input type="tel" id="phone" name="phone" placeholder="Enter your phone number" required>
+            </div>
+
+            <!-- Services Field -->
+            <div class="form-group">
+                <label for="services">Select a Service</label>
+                <select id="services" name="services" required>
+                    <option value="" disabled selected>Choose a service</option>
+                    <option value="management">Management</option>
+                    <option value="business-intelligence">Business Intelligence & Analytics</option>
+                    <option value="sales-marketing">Sales and Marketing</option>
+                    <option value="mergers-acquisitions">Mergers and Acquisitions</option>
+                    <option value="financials">Financials</option>
+                    <option value="human-resources">Human Resources</option>
+                    <option value="hospitality">Hospitality</option>
+                    <option value="legal">Legal</option>
+                    <option value="real-estate">Real Estate</option>
+                    <option value="travel">Travel</option>
+                    <option value="training-development">Training and Development</option>
+                    <option value="event-production">Event and Production</option>
+                </select>
+            </div>
+
+            <!-- Submit Button -->
+            <div class="form-group">
+                <button type="submit" class="btn">Register</button>
+            </div>
+
+            <!-- Back Button -->
+            <a href="index.html" class="back-btn">&larr; Back</a>
+        </form>
+    </div>
+</body>
+
+</html>

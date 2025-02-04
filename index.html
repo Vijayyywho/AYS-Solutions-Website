@@ -48,68 +48,81 @@
 
 
     <!-- Services Section -->
-    <section class="services-container" id="service">
-        <h1 class="h-primary center">Our Services</h1>
-        <div id="services">
-            <!-- Highlighted services (always visible) -->
-            <div class="box highlight">
-                <i class="icon fas fa-chart-line"></i>
-                <h2 class="h-secondary center">Management</h2>
-            </div>
-            <div class="box highlight">
-                <i class="icon fas fa-database"></i>
-                <h2 class="h-secondary center">Business Intelligence & Analytics</h2>
-            </div>
-            <div class="box highlight">
-                <i class="icon fas fa-bullhorn"></i>
-                <h2 class="h-secondary center">Sales and Marketing</h2>
-            </div>
-            <div class="box highlight">
-                <i class="icon fas fa-handshake"></i>
-                <h2 class="h-secondary center">Mergers and Acquisitions</h2>
-            </div>
+<section class="services-container" id="service">
+    <h1 class="h-primary center">Our Services</h1>
+    <div id="services">
+        <!-- Highlighted services (always visible) -->
+        <div class="box highlight" data-service="management" onclick="showServicePopup(this)">
+            <i class="icon fas fa-chart-line"></i>
+            <h2 class="h-secondary center">Management</h2>
         </div>
+        <div class="box highlight" data-service="business-intelligence" onclick="showServicePopup(this)">
+            <i class="icon fas fa-database"></i>
+            <h2 class="h-secondary center">Business Intelligence & Analytics</h2>
+        </div>
+        <div class="box highlight" data-service="sales-marketing" onclick="showServicePopup(this)">
+            <i class="icon fas fa-bullhorn"></i>
+            <h2 class="h-secondary center">Sales and Marketing</h2>
+        </div>
+        <div class="box highlight" data-service="mergers-acquisitions" onclick="showServicePopup(this)">
+            <i class="icon fas fa-handshake"></i>
+            <h2 class="h-secondary center">Mergers and Acquisitions</h2>
+        </div>
+    </div>
 
-        <!-- Hidden (non-highlighted) services -->
-        <div id="extra-services" class="extra-services" style="display: none;">
-            <div class="box">
-                <i class="icon fas fa-dollar-sign"></i>
-                <h2 class="h-secondary center">Financials</h2>
-            </div>
-            <div class="box">
-                <i class="icon fas fa-users"></i>
-                <h2 class="h-secondary center">Human Resources</h2>
-            </div>
-            <div class="box">
-                <i class="icon fas fa-bed"></i>
-                <h2 class="h-secondary center">Hospitality</h2>
-            </div>
-            <div class="box">
-                <i class="icon fas fa-gavel"></i>
-                <h2 class="h-secondary center">Legal</h2>
-            </div>
-            <div class="box">
-                <i class="icon fas fa-building"></i>
-                <h2 class="h-secondary center">Real Estate</h2>
-            </div>
-            <div class="box">
-                <i class="icon fas fa-plane"></i>
-                <h2 class="h-secondary center">Travel</h2>
-            </div>
-            <div class="box">
-                <i class="icon fas fa-graduation-cap"></i>
-                <h2 class="h-secondary center">Training and Development</h2>
-            </div>
-            <div class="box">
-                <i class="icon fas fa-film"></i>
-                <h2 class="h-secondary center">Event and Production</h2>
-            </div>
+    <!-- Extra services (hidden by default) -->
+    <div id="extra-services" class="extra-services" style="display: none;">
+        <!-- Non-highlighted services (hidden initially) -->
+        <div class="box" data-service="financials" onclick="showServicePopup(this)">
+            <i class="icon fas fa-dollar-sign"></i>
+            <h2 class="h-secondary center">Financials</h2>
         </div>
+        <div class="box" data-service="human-resources" onclick="showServicePopup(this)">
+            <i class="icon fas fa-users"></i>
+            <h2 class="h-secondary center">Human Resources</h2>
+        </div>
+        <div class="box" data-service="hospitality" onclick="showServicePopup(this)">
+            <i class="icon fas fa-bed"></i>
+            <h2 class="h-secondary center">Hospitality</h2>
+        </div>
+        <div class="box" data-service="legal" onclick="showServicePopup(this)">
+            <i class="icon fas fa-gavel"></i>
+            <h2 class="h-secondary center">Legal</h2>
+        </div>
+        <div class="box" data-service="real-estate" onclick="showServicePopup(this)">
+            <i class="icon fas fa-building"></i>
+            <h2 class="h-secondary center">Real Estate</h2>
+        </div>
+        <div class="box" data-service="travel" onclick="showServicePopup(this)">
+            <i class="icon fas fa-plane"></i>
+            <h2 class="h-secondary center">Travel</h2>
+        </div>
+        <div class="box" data-service="training-development" onclick="showServicePopup(this)">
+            <i class="icon fas fa-graduation-cap"></i>
+            <h2 class="h-secondary center">Training and Development</h2>
+        </div>
+        <div class="box" data-service="event-production" onclick="showServicePopup(this)">
+            <i class="icon fas fa-film"></i>
+            <h2 class="h-secondary center">Event and Production</h2>
+        </div>
+    </div>
 
-        <div class="center">
-            <button class="btn cta" onclick="toggleServices()">Explore All Services</button>
+    <!-- Service Popup Modal -->
+    <div id="service-popup" class="service-popup" style="display: none;">
+        <div class="service-popup-content">
+            <span class="close-btn" onclick="closeServicePopup()">&times;</span>
+            <h2 id="popup-title"></h2>
+            <p id="popup-description"></p>
+            <ul id="popup-benefits"></ul>
+            <a href="registration.html" class="btn cta" id="cta-btn">Get Started with [Service]</a>
         </div>
-    </section>
+    </div>
+
+    <div class="center">
+        <button class="btn cta" onclick="toggleServices()">Explore All Services</button>
+    </div>
+</section>
+
 
     <section id="testimonials">
         <h1 class="h-primary center">What Our Clients Say</h1>
@@ -144,7 +157,7 @@
     <!-- CTA Section -->
     <section id="cta-section">
         <h1 class="cta-heading">Join AY Solutions Today!</h1>
-        <a href="#contact" class="btn cta-btn">Get Started</a>
+        <a href="registration.html" class="btn cta-btn">Get Started</a>
     </section>
 
     <!-- About Us Section -->
